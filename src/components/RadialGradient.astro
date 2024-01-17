@@ -1,0 +1,33 @@
+<script>
+  const gradient = document.getElementById("gradient") as HTMLElement;
+  document.documentElement.onmousemove = function (e: MouseEvent) {
+    const x = e.clientX - gradient!.clientWidth / 2 + "px";
+    gradient.style.setProperty("--positionX", x);
+    const y = e.clientY - gradient!.clientHeight / 2 + "px";
+    gradient.style.setProperty("--positionY", y);
+  };
+</script>
+
+<div id="gradient" class="radial__gradient"></div>
+
+<style>
+  :root {
+    --positionX: 0;
+    --positionY: 0;
+  }
+
+  .radial__gradient {
+    width: min(300px, 40vw);
+    height: min(300px, 40vw);
+    position: fixed;
+    left: var(--positionX);
+    top: var(--positionY);
+    filter: blur(10rem);
+    pointer-events: none;
+    background: radial-gradient(
+      circle closest-side,
+      oklch(var(--p)),
+      transparent 100%
+    );
+  }
+</style>
