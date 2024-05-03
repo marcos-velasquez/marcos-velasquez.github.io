@@ -1,0 +1,102 @@
+<section id="experience" class="relative pt-24">
+  <h2 class="text-3xl font-bold">
+    <span class="text-primary font-semibold text-xl">1.</span> Experiencia
+  </h2>
+
+  <div class="divider divider-vertical mt-0 mb-16"></div>
+
+  <ul
+    class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+  >
+    <li>
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5"
+          ><path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"></path></svg
+        >
+      </div>
+      <div class="timeline-start md:text-end mb-10">
+        <time class="font-mono italic">2018 / 2020</time>
+        <div class="text-lg font-black">Freelance</div>
+        <div class="text-sm font-medium text-slate-400">
+          Full-stack developer
+        </div>
+      </div>
+      <hr />
+    </li>
+    <li>
+      <hr />
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5"
+          ><path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"></path></svg
+        >
+      </div>
+      <div class="timeline-end mb-10">
+        <time class="font-mono italic">2020 / 2021</time>
+        <div class="text-lg font-black">Hello mundo Chile</div>
+        <div class="text-sm font-medium text-slate-400">
+          Full-stack developer
+        </div>
+      </div>
+      <hr />
+    </li>
+    <li>
+      <hr />
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5"
+          ><path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"></path></svg
+        >
+      </div>
+      <div class="timeline-start md:text-end mb-10">
+        <time class="font-mono italic">2022 / presente</time>
+        <div class="text-lg font-black">Socialgest</div>
+        <div class="text-sm font-medium text-slate-400">
+          Angular front-end developer
+        </div>
+      </div>
+      <hr />
+    </li>
+  </ul>
+  <div class="radial__gradient"></div>
+</section>
+
+<script>
+  import { fadeInUpScrollAnimate } from "../scripts/animations/FadeInUpScroll.animation";
+  fadeInUpScrollAnimate(".timeline li");
+</script>
+
+<style>
+  .radial__gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    filter: blur(10rem);
+    pointer-events: none;
+    background: radial-gradient(
+      circle closest-side,
+      oklch(var(--a)),
+      transparent 100%
+    );
+  }
+</style>

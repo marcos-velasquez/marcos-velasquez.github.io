@@ -1,21 +1,23 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import RadialGradient from "../components/RadialGradient.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Marcos Velásquez</title>
   </head>
   <body>
     <Header />
     <slot />
+    <Footer />
     <RadialGradient />
   </body>
 </html>

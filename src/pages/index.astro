@@ -1,11 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Experience from "../components/Experience.astro";
+import Work from "../components/Work.astro";
+import Certificate from "../components/Certificate.astro";
 ---
 
 <Layout title="Marcos Velásquez">
-  <main class="max-w-screen-2xl mx-auto">
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
+  <main class="max-w-screen-xl mx-auto p-4 space-y-20">
+    <Hero />
+    <Experience />
+    <Work />
+    <Certificate />
   </main>
 </Layout>
-
-<style></style>

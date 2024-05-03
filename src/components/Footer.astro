@@ -1,0 +1,35 @@
+---
+import LinkedinIcon from "./icons/LinkedinIcon.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
+import FacebookIcon from "./icons/FacebookIcon.astro";
+---
+
+<footer
+  class="footer footer-center p-10 mt-24 bg-base-200 text-base-content rounded"
+>
+  <nav class="grid grid-flow-col gap-4">
+    <a href="#experience" class="link link-hover">Experiencia</a>
+    <a href="#work" class="link link-hover">Trabajos</a>
+    <a href="#certificates" class="link link-hover">Certificados</a>
+  </nav>
+  <nav>
+    <div class="grid grid-flow-col gap-4">
+      <a
+        href="https://www.linkedin.com/in/marcos-vel%C3%A1squez-8667b0204/"
+        target="_blank"
+      >
+        <LinkedinIcon />
+      </a>
+      <a href="https://github.com/marcos-velasquez" target="_blank">
+        <GithubIcon />
+      </a>
+      <a href="https://www.facebook.com/markoz.velasquez" target="_blank">
+        <FacebookIcon />
+      </a>
+    </div>
+  </nav>
+  <aside>
+    <p>Made with 💓 By Marcos Velásquez 🤟</p>
+    <p>Copyright © {new Date().getFullYear()}</p>
+  </aside>
+</footer>

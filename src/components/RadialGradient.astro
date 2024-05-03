@@ -1,3 +1,5 @@
+<div id="gradient" class="radial__gradient"></div>
+
 <script>
   const gradient = document.getElementById("gradient") as HTMLElement;
   document.documentElement.onmousemove = function (e: MouseEvent) {
@@ -7,8 +9,6 @@
     gradient.style.setProperty("--positionY", y);
   };
 </script>
-
-<div id="gradient" class="radial__gradient"></div>
 
 <style>
   :root {

@@ -1,0 +1,54 @@
+---
+import Web from "./icons/Web.astro";
+---
+
+<section id="work" class="relative pt-24">
+  <h2 class="text-3xl font-bold">
+    <span class="text-primary font-semibold text-xl">2.</span> Trabajos
+  </h2>
+
+  <div class="divider divider-vertical mt-0 mb-16"></div>
+
+  <div class="card lg:card-side bg-base-300 shadow-xl mb-10">
+    <figure>
+      <img src="/work/editor-image.png" alt="Album" />
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">Editor de imágenes</h2>
+      <p>
+        Una herramienta creativa que fusiona la potencia de Fabric.js y Angular
+        para brindarte un lienzo digital donde tus ideas cobran vida. Con ella,
+        puedes recortar, redimensionar y, gracias a la inteligencia artificial,
+        eliminar fondos de imágenes con facilidad. ¿Necesitas inspiración?
+        Accede a Unsplash o importa desde tu PC o el propio Canva.
+      </p>
+      <p class="my-4">
+        Pero eso no es todo. Desde generar códigos QR hasta seleccionar iconos
+        de Icon Finder, todo está a tu alcance. ¿Quieres personalizar SVGs? ¡Por
+        supuesto! Aplica filtros, efectos y máscaras de recorte para darle un
+        toque único a tus creaciones.
+      </p>
+      <p>
+        ¿Te gustan las plantillas? Este editor tiene de sobra. Diseños
+        prediseñados, textos con múltiples fuentes y la capacidad de agregar
+        figuras y emojis. Además, podrás jugar con sombras y una amplia gama de
+        herramientas de diseño para dar ese toque final.
+      </p>
+      <div class="card-actions justify-end">
+        <a
+          href="https://ornate-alfajores-4569a0.netlify.app/"
+          target="_blank"
+          class="btn btn-link"
+        >
+          <Web />
+          Ver demo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { fadeInScroll } from "../scripts/animations/fadeInScroll.animaton";
+  document.querySelectorAll(".card").forEach((item) => fadeInScroll(item));
+</script>
