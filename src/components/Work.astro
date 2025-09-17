@@ -1,6 +1,7 @@
 ---
-import ExternalLink from "./icons/ExternalLink.astro";
-import Web from "./icons/Web.astro";
+import ExternalLinkIcon from "./icons/ExternalLinkIcon.astro";
+import WebIcon from "./icons/WebIcon.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
 ---
 
 <section id="work" class="relative pt-24">
@@ -34,7 +35,7 @@ import Web from "./icons/Web.astro";
       </p>
       <div class="card-actions justify-end">
         <a href="https://image-editor1234.netlify.app" target="_blank" class="btn btn-link">
-          <Web />
+          <WebIcon />
           Ver demo
         </a>
       </div>
@@ -58,8 +59,42 @@ import Web from "./icons/Web.astro";
       </p>
       <div class="card-actions justify-end">
         <a href="https://telollevochile.cl" target="_blank" class="btn btn-link">
-          <Web />
+          <WebIcon />
           Ver sitio web
+        </a>
+      </div>
+    </div>
+  </article>
+
+
+  <article class="card lg:card-side bg-base-300 shadow-xl mb-10">
+    <figure>
+      <img src="/works/raffle.png" alt="Sistema de Rifas" />
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">Sistema de Gestión de Rifas</h2>
+      <p>
+        Aplicación web desarrollada con <span class="font-bold">Angular</span> y <span class="font-bold">PocketBase</span> 
+        que gestiona rifas digitales con funcionalidades completas para usuarios públicos y administradores. 
+        Implementa <span class="font-bold">Domain-Driven Design (DDD)</span> con arquitectura hexagonal, 
+        separando claramente las capas de dominio, aplicación e infraestructura.
+      </p>
+      <p class="my-4">
+        Incluye actualizaciones en tiempo real, sistema de notificaciones 
+        automáticas vía WhatsApp, gestión de estados de números (disponible, en proceso, apartado), 
+        y una ruleta virtual que graba el proceso de sorteo. Los usuarios pueden filtrar números, 
+        subir comprobantes de pago y consultar historial con videos de sorteos.
+      </p>
+      <p>
+        El proyecto cuenta con <span class="font-bold">testing unitario con Jest</span>, documentación 
+        completa con diagramas UML, y configuración de desarrollo con PocketBase como backend. 
+        La arquitectura modular permite escalabilidad y mantenibilidad del código, con stores reactivos 
+        y componentes reutilizables siguiendo las mejores prácticas de Angular.
+      </p>
+      <div class="card-actions justify-end">
+        <a href="https://github.com/marcos-velasquez/raffle" target="_blank" class="btn btn-link">
+          <GithubIcon />
+          Ver código
         </a>
       </div>
     </div>
@@ -68,10 +103,10 @@ import Web from "./icons/Web.astro";
   <footer>
     <div class="flex justify-end gap-2">
       <a class="btn btn-outline" href="https://github.com/marcos-velasquez/projects" target="_blank">
-        Proyectos prácticos <ExternalLink />
+        Proyectos prácticos <ExternalLinkIcon />
       </a>
       <a class="btn btn-outline" href="https://github.com/marcos-velasquez/exercises" target="_blank">
-        Ejercicios prácticos <ExternalLink />
+        Ejercicios prácticos <ExternalLinkIcon />
       </a>
     </div>
   </footer>
