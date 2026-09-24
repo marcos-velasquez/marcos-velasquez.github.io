@@ -1,16 +1,77 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
-import Experience from "../components/Experience.astro";
-import Work from "../components/Work.astro";
-import Certificate from "../components/Certificate.astro";
+const destino = 'https://marcos-velasquez.web.app/';
 ---
 
-<Layout title="Marcos Velásquez">
-  <main class="max-w-screen-xl mx-auto p-4 space-y-20">
-    <Hero />
-    <Experience />
-    <Work />
-    <Certificate />
-  </main>
-</Layout>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marcos Velásquez — el portafolio se mudó</title>
+    <meta name="description" content="El portafolio de Marcos Velásquez ahora vive en marcos-velasquez.web.app." />
+
+    {/* Un sitio estático no puede responder 301, así que la mudanza se declara por las tres vías que
+        un cliente o un rastreador sí entienden: la canónica dice cuál es la dirección buena, el
+        refresh actúa aunque no haya JavaScript, y el reemplazo de historial evita que esta página
+        quede en el botón de atrás y devuelva al visitante aquí en bucle. */}
+    <link rel="canonical" href={destino} />
+    <meta http-equiv="refresh" content={`0; url=${destino}`} />
+    <script is:inline define:vars={{ destino }}>
+      location.replace(destino);
+    </script>
+
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        background: hsl(38 8% 5%);
+        color: hsl(38 23% 97%);
+        font-family: system-ui, sans-serif;
+      }
+      main {
+        max-width: 34rem;
+      }
+      .eyebrow {
+        margin: 0 0 18px;
+        font-family: ui-monospace, monospace;
+        font-size: 0.8rem;
+        letter-spacing: 1.6px;
+        color: hsl(38 5% 62%);
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+        line-height: 1.12;
+        letter-spacing: -0.8px;
+        font-weight: 600;
+      }
+      p {
+        margin: 0 0 26px;
+        line-height: 1.6;
+        color: hsl(38 6% 72%);
+      }
+      a {
+        font-family: ui-monospace, monospace;
+        color: hsl(25 95% 53%);
+        text-decoration: none;
+        border-bottom: 1px solid currentColor;
+        padding-bottom: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">MARCOS VELÁSQUEZ</p>
+      <h1>El portafolio se mudó.</h1>
+      <p>Esta dirección queda como puerta. Si no te lleva sola en un segundo, entrá por acá:</p>
+      <a href={destino}>marcos-velasquez.web.app →</a>
+    </main>
+  </body>
+</html>
